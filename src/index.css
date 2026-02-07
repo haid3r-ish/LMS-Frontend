@@ -1,0 +1,50 @@
+/* RESET & BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f4f9; color: #333; height: 100vh; overflow: hidden; } /* Hide outer scroll */
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; font-size: 1rem; transition: 0.2s; }
+
+/* LAYOUT CONTAINER (Sidebar + Main) */
+.app-container { display: flex; height: 100vh; }
+
+/* SIDEBAR */
+.sidebar { width: 80px; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; padding-top: 20px; flex-shrink: 0; transition: width 0.3s; }
+.sidebar:hover { width: 240px; } /* Expand on hover */
+.sidebar-item { width: 100%; padding: 15px; display: flex; align-items: center; gap: 15px; cursor: pointer; white-space: nowrap; overflow: hidden; color: #aaa; }
+.sidebar-item:hover { background: #333; color: white; }
+.sidebar-item.active { border-left: 4px solid #3b82f6; background: #252525; color: white; }
+.icon { font-size: 1.5rem; min-width: 50px; text-align: center; }
+
+/* MAIN CONTENT AREA */
+.main-content { flex: 1; padding: 30px; overflow-y: auto; }
+.top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+
+/* SEARCH BAR */
+.search-box { display: flex; align-items: center; background: white; padding: 0 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 400px; }
+.search-input { border: none; padding: 12px; width: 100%; outline: none; font-size: 1rem; }
+
+/* GRID SYSTEM */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+
+/* CARDS */
+.card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: relative; display: flex; flex-direction: column; }
+.card-thumb { height: 180px; background: #eee; display: flex; align-items: center; justify-content: center; color: #888; }
+.card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+.card-title { font-size: 1.1rem; margin-bottom: 5px; font-weight: 600; }
+.card-desc { font-size: 0.9rem; color: #666; margin-bottom: 15px; flex: 1; }
+.card-footer { margin-top: auto; display: flex; gap: 10px; }
+
+/* BUTTONS */
+.btn { padding: 8px 16px; border-radius: 6px; font-weight: 500; text-align: center; }
+.btn-primary { background: #2563eb; color: white; }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-danger { background: #dc2626; color: white; }
+.btn-danger:hover { background: #b91c1c; }
+.btn-outline { border: 1px solid #ddd; background: white; color: #333; }
+.btn-outline:hover { background: #f9f9f9; }
+
+/* FORMS (Login/Create) */
+.form-container { max-width: 500px; margin: 50px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
